@@ -7,7 +7,7 @@ export default function TabTwoScreen() {
   return (
     <VStack className="flex-1 p-4">
       <Box className="h-[60px] flex justify-center ">
-        <Text className="text-3xl text-center">Add Memo</Text>
+        <Text className="text-3xl text-center">Add a Memo</Text>
       </Box>
       <Form />
     </VStack>
