@@ -4,6 +4,7 @@ import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 import { removeMemo, seedMemos, useMemos } from '@/stores/memos';
 import React from "react";
+import { FlatList } from "react-native";
 export const sampleMemos = [
   {
     id: '2025-11-28T09:00:00.000Z',
@@ -32,11 +33,19 @@ export default function HomeScreen() {
         <Text className="text-3xl text-center">Memos</Text>
 
       </Box>
-      {
-        memos.map((memo) => (
-          <Card key={memo.id} title={memo.title} content={memo.content} handleDelete={() => handleDelete(memo.id)} />
-        ))
-      }
+      <FlatList
+    data={memos}
+    keyExtractor={(m) => m.id}
+    // contentContainerStyle={{ paddingBottom: 16 }}
+    renderItem={({ item }) => (
+      <Card
+        key={item.id}
+        title={item.title}
+        content={item.content}
+        handleDelete={() => handleDelete(item.id)}
+      />
+    )}
+  />
     </VStack>
   );
 }
