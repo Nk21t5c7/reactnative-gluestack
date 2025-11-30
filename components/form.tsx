@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/form-control";
 import { Input, InputField } from "@/components/ui/input";
 import React from "react";
+import { Keyboard } from "react-native";
 
 import { VStack } from "@/components/ui/vstack";
 import { addMemo } from "@/stores/memos";
@@ -20,6 +21,7 @@ export default function Form() {
       addMemo(data.title, data.content);
       setData({ title: "", content: "" });
     }
+    Keyboard.dismiss();
   };
   return (
     <VStack className="p-4 bg-white">
