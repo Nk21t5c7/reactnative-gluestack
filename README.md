@@ -13,4 +13,4 @@ It demonstrates:
 - Gluestack UI v3
 
 ## Demo
-![Demo](app/assets/videos/demo.gif)
+![Demo](assets/videos/demo.gif)
