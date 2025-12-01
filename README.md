@@ -11,3 +11,6 @@ It demonstrates:
 ## Tech Stack
 - React Native + Expo
 - Gluestack UI v3
+
+## Demo
+![Demo](app/assets/videos/demo.gif)
